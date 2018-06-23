@@ -1,21 +1,22 @@
+#Ubuntu can't support chinese character！
 import easygui as g
 import sys
 
 while 1:
-    g.msgbox('嗨，欢迎进入第一个界面游戏！')
+    g.msgbox('Hi,Welcome to your first interface game！')
 
-    msg = '请问你希望在鱼C工作室学习到什么知识呢？'
-    title = '小游戏互动'
-    choices = ['谈恋爱','编程','OOXX','琴棋书画']
+    msg = 'What would you like to learn here？'
+    title = 'little game interface!'
+    choices = ['Love','Program','OOXX','QinQiShuHua']
 
     choice = g.choicebox(msg,title,choices)
 
     # note that we convert choice to string,in case
     # the user cancelled ths choice ,and we got none,
-    g.msgbox ('你的选择是：'+ str(choice),'结果')
+    g.msgbox ('Your choice：'+ str(choice),'result')
 
-    msg = '你希望重新开始小游戏吗？'
-    title = '请选择'
+    msg = 'Would you like to restart the game？'
+    title = 'Please make your chioce'
 
     if g.ccbox(msg,title): #show aContinuue/Cancel dialog
         pass # user chose Continue
